@@ -64,6 +64,7 @@ static EnumPropertyItem actuator_type_items[] = {
 	{ACT_STATE, "STATE", 0, "State", ""},
 	{ACT_VISIBILITY, "VISIBILITY", 0, "Visibility", ""},
 	{ACT_STEERING, "STEERING", 0, "Steering", ""},
+	{ACT_REDIRECTION, "REDIRECTION", 0, "Redirection", ""},
 	{0, NULL, 0, NULL, NULL}
 };
 
@@ -110,6 +111,8 @@ static StructRNA *rna_Actuator_refine(struct PointerRNA *ptr)
 			return &RNA_ArmatureActuator;
 		case ACT_STEERING:
 			return &RNA_SteeringActuator;
+		case ACT_REDIRECTION:
+		    return &RNA_RedirectionActuator;
 		default:
 			return &RNA_Actuator;
 	}
@@ -2038,6 +2041,11 @@ static void rna_def_steering_actuator(BlenderRNA *brna)
 	RNA_def_property_update(prop, NC_LOGIC, NULL);
 }
 
+static void rna_def_redirection_actuator(BlenderRNA *brna)
+{
+    ;
+}
+
 void RNA_def_actuator(BlenderRNA *brna)
 {
 	rna_def_actuator(brna);
@@ -2059,6 +2067,7 @@ void RNA_def_actuator(BlenderRNA *brna)
 	rna_def_state_actuator(brna);
 	rna_def_armature_actuator(brna);
 	rna_def_steering_actuator(brna);
+	rna_def_redirection_actuator(brna);
 }
 
 #endif

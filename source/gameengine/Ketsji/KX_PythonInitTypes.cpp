@@ -58,6 +58,7 @@
 #include "KX_ParentActuator.h"
 #include "KX_PolyProxy.h"
 #include "KX_PythonSeq.h"
+#include "KX_RedirectionActuator.h"
 #include "KX_SCA_AddObjectActuator.h"
 #include "KX_SCA_EndObjectActuator.h"
 #include "KX_SCA_ReplaceMeshActuator.h"

@@ -519,6 +519,8 @@ static const char *actuator_name(int type)
 		return N_("Armature");
 	case ACT_STEERING:
 		return N_("Steering");
+	case ACT_REDIRECTION:
+	    return N_("Redirection");
 	}
 	return N_("Unknown");
 }
@@ -2177,6 +2179,11 @@ static void draw_actuator_steering(uiLayout *layout, PointerRNA *ptr)
 	}
 }
 
+static void draw_actuator_redirection(uiLayout *layout, PoinaterRNA *ptr)
+{
+    ;
+}
+
 static void draw_brick_actuator(uiLayout *layout, PointerRNA *ptr, bContext *C)
 {
 	uiLayout *box;
@@ -2241,6 +2248,9 @@ static void draw_brick_actuator(uiLayout *layout, PointerRNA *ptr, bContext *C)
 			break;
 		case ACT_STEERING:
 			draw_actuator_steering(box, ptr);
+			break;
+		case ACT_REDIRECTION:
+		    draw_actuator_redirection(box, ptr);
 	}
 }
 

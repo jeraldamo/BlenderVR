@@ -111,6 +111,7 @@ set(SRC
 	KX_RayCast.cpp
 	KX_RayEventManager.cpp
 	KX_RaySensor.cpp
+	KX_RedirectionActuator.cpp
 	KX_SCA_AddObjectActuator.cpp
 	KX_SCA_DynamicActuator.cpp
 	KX_SCA_EndObjectActuator.cpp
@@ -190,6 +191,7 @@ set(SRC
 	KX_RayCast.h
 	KX_RayEventManager.h
 	KX_RaySensor.h
+	KX_RedirectionActuator.h
 	KX_SCA_AddObjectActuator.h
 	KX_SCA_DynamicActuator.h
 	KX_SCA_EndObjectActuator.h

@@ -70,6 +70,7 @@
 #include "KX_ParentActuator.h"
 #include "KX_SCA_DynamicActuator.h"
 #include "KX_SteeringActuator.h"
+#include "KX_RedirectionActuator.h"
 
 #include "KX_Scene.h"
 #include "KX_KetsjiEngine.h"
@@ -1102,6 +1103,11 @@ void BL_ConvertActuators(const char* maggiename,
 				baseact = tmpstact;
 				break;
 			}
+		case ACT_REDIRECTION:
+		    {
+		        bRedirectionActuator *rdAct = (bRedirectionActuator *) bact->data;
+		        
+		    }
 		default:
 			; /* generate some error */
 		}

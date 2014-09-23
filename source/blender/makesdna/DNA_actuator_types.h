@@ -245,6 +245,11 @@ typedef struct bSteeringActuator {
 	struct Object *navmesh;
 } bSteeringActuator;
 
+typedef struct bRedirectionActuator {
+    ;
+    
+} bRedirectionActuator;
+
 typedef struct bActuator {
 	struct bActuator *next, *prev, *mynew;
 	short type;

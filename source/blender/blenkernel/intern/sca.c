@@ -477,6 +477,9 @@ void init_actuator(bActuator *act)
 		sta->flag = ACT_STEERING_AUTOMATICFACING;
 		sta->facingaxis = 1;
 		break;
+	case ACT_REDIRECTION:
+	    act->data= MEM_callocN(sizeof(bRedirectionActuator), "redirection act");
+	    break;
 	default:
 		; /* this is very severe... I cannot make any memory for this        */
 		/* logic brick...                                                    */
